@@ -6,6 +6,7 @@ import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.SceneAntialiasing;
+import javafx.scene.shape.Sphere;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -18,9 +19,12 @@ public class Main extends Application {
 		eiffelTower.setScaleX(50);
 		eiffelTower.setScaleY(50);
 		eiffelTower.setScaleZ(50);
+		Sphere sphere = new Sphere(0.3);
+		sphere.setVisible(false);
+		eiffelTower.getChildren().add(new Sphere(0.3));
 		Scene scene = new Scene(eiffelTower, 1024.0, 768.0, true,
 				SceneAntialiasing.BALANCED);
-		Controller controller = new Controller(scene);
+		Controller controller = new Controller(scene); 
 		
 		primaryStage.setTitle("Eiffel Tower");
 		primaryStage.setScene(scene);

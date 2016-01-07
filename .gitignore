@@ -1,2 +1,6 @@
 out
 .idea
+/bin/
+.classpath
+cg_eiffel.iml
+hs_err_pid777.log
